@@ -32,6 +32,7 @@ public final class IPmation {
 
     private static final HttpClient CLIENT = HttpClient.newBuilder()
             .connectTimeout(TIMEOUT)
+            .followRedirects(HttpClient.Redirect.NORMAL)
             .build();
 
     private IPmation() {
